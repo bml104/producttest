@@ -19,12 +19,15 @@
               <p v-else>Out of Stock</p>
               <p v-if="onSale === true">On SALE NOW!!!</p>
               <p v-else></p> 
+              <ul>
+                <li v-for="detail in details">{{detail}}</li>
+              </ul>
         </div>   
       </div>       
       
    </div>
 
    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
-   <script src="mail.js"></script>
+   <script src="main.js"></script>
   </body>
 </html>
