@@ -3,11 +3,34 @@ var app = new Vue({
   data:{
     product: 'Red Shoe',
     description: 'Red Baller Shoes',
-    image: 'https://resizing.flixster.com/PamuH4K1SFI5ULuzoo0LobR3kxs=/300x300/v1.bjs2ODYyMTk7ajsxNzkxNzsxMjAwOzE5MjA7MTA4MA',
+    image: '/img/red.png',
     shoeUrl: 'https://www.tangeroutlet.com/daytona',
-    inventory: 32,
+    inventory: 0,
+    inStock: false,
     onSale: false,
-    details: ["cotton", "red", "low top"]
-
+    details: ["cotton", "red", "low top", "white laces"],
+    shoeSizes: ["9", "10", "11", "11.5"],
+    cart: 0,
+    variants: [
+    {
+      variantId: 2234,
+      variantColor: 'red',
+      variantImage: './img/red.png'
+    },
+    {
+      variantId: 4774,
+      variantColor: 'blue',
+      variantImage: '/img/blue.png'
+    }
+  ]
+  },
+  methods: {
+    addToCart: function(){
+      this.cart += 1
+    },
+    updateProduct: function(variantImage){
+      this.image = variantImage
+    }
   }
+
 })
